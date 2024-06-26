@@ -1,0 +1,32 @@
+# Ignore Python bytecode
+__pycache__/
+
+# Ignore environment
+venv/
+*.pyc
+
+# Ignore local development settings
+myproject/settings_local.py
+
+# Ignore database
+db.sqlite3
+
+# Ignore IDE settings
+.idea/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore logs
+*.log
+
+# Ignore generated pcap files
+network_analysis_ids/pcap_files/
+
+# Ignore user uploads
+media/
+
+# Ignore secret key (if you store it in a file)
+myproject/secret_key.txt
+
+# Ignore any other sensitive or local files

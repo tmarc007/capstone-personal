@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload PCAP File{% endblock %}
+
+{% block header %}Upload PCAP File{% endblock %}
+
+{% block content %}
+<h1>Upload PCAP File</h1>
+<form method="post" enctype="multipart/form-data" action="{% url 'analyze_traffic' pcap_file.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}

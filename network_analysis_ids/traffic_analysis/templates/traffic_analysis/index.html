@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page - Traffic Analysis
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Traffic Analysis</h1>
+    <p>This is the home page content. You can add more sections and content here.</p>
+    
+    <!-- Example section showing recent analysis results or other dynamic content -->
+    <h2>Recent Analysis Results</h2>
+    <ul>
+        {% for result in recent_results %}
+            <li>{{ result.date }} - <a href="{% url 'analyze_traffic' pcap_file_id=result.id %}">View Analysis</a></li>
+        {% empty %}
+            <li>No recent results found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

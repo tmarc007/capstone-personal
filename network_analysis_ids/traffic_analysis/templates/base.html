@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Traffic Analysis{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Traffic Analysis{% endblock %}</h1>
+        <p>These services are for PCAP file analysis and Intrusion detection</p>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="{% url 'upload_files' %}">Upload PCAP File</a></li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+</html>
