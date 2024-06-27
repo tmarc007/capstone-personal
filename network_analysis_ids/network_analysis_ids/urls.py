@@ -19,7 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload/', include('traffic_analysis.urls')),
-    path('analyze/<int:pcap_file_id>/', include('traffic_analysis.urls')),
     path('', include('traffic_analysis.urls')),
 ]
