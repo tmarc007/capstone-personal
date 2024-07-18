@@ -3,10 +3,17 @@ from django.shortcuts import render, redirect
 from .forms import PcapFileForm
 from .models import PcapFile
 from .utils import read_pcap
+from django.views.generic import TemplateView
 import os
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
 
 def upload_view(request):
     form = PcapFileForm()

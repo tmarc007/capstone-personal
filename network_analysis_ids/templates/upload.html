@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload PCAP File{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="page">
+<form method="post" enctype="multipart/form-data" action="{% url 'upload_files' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Upload PCAP file</label>
+        <input class="form-control" type="file" id="formFile">
+    </div>
+    <button type="button submit" class="btn btn-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        Upload
+    </button>
+</form>
+</div>
+{% endblock %}
